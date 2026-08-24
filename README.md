@@ -5,7 +5,8 @@ truck cruising a highway at sunset, hand-painted "Safar-e-Ishq" truck art on
 the windshield header, and a YouTube-playlist-backed cassette deck floating
 over the dashboard.
 
-**Live repo:** [github.com/faisaltron/truckdriver-wtf](https://github.com/faisaltron/truckdriver-wtf)
+**Live demo:** [faisaltron.github.io/truckdriver-wtf](https://faisaltron.github.io/truckdriver-wtf/)
+**Repo:** [github.com/faisaltron/truckdriver-wtf](https://github.com/faisaltron/truckdriver-wtf)
 
 ## Features
 
@@ -76,6 +77,15 @@ falls back gracefully (video → photo → gradient) if any are missing:
 | `public/truck-background.mp4` | Looping highway background video |
 | `public/truck-background.jpg` | Poster frame / fallback photo |
 | `public/title.png` | Windshield title artwork (transparent background) |
+
+## Deployment
+
+Every push to `main` triggers [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml),
+which builds the app and publishes `dist/` to GitHub Pages automatically —
+no manual deploy step needed. The Vite `base` path in
+[`vite.config.js`](vite.config.js) is set to `/truckdriver-wtf/` to match
+the project Pages URL; update it if you fork this under a different repo
+name.
 
 ## Project structure
 
