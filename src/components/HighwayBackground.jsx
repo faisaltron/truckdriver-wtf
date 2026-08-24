@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 
-const BG_VIDEO_SRC = '/truck-background.mp4'
-const BG_IMAGE_SRC = '/truck-background.jpg'
+const BG_VIDEO_SRC = `${import.meta.env.BASE_URL}truck-background.mp4`
+const BG_IMAGE_SRC = `${import.meta.env.BASE_URL}truck-background.jpg`
 
 export function HighwayBackground() {
   const [videoFailed, setVideoFailed] = useState(false)
